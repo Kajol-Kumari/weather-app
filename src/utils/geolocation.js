@@ -1,7 +1,7 @@
 const request = require('request');
 
 const geofunc = (address, callback) => {
-    const url = 'https://api.mapbox.com/geocoding/v5/mapbox.places/'+ address + '.json?types=country&access_token=pk.eyJ1Ijoia2Fqb2wtc2luZ2giLCJhIjoiY2syYWw2enMzMDIyMTNjbGs0dncwcW9sOCJ9.W78Htfcrq4Soc4wUQvjmQw'
+    const url = 'https://api.mapbox.com/geocoding/v5/mapbox.places/'+ address + '.json?types=country&access_token=pk.eyJ1Ijoia2Fqb2wtc2luZ2giLCJhIjoiY2syYWw2enMzMDIyMTNjbGs0dncwcW9sOCJ9.W78Htfcrq4Soc4wUQvjmQw&limit=1'
     request({url, json: true}, (error, {body}) => {
         if(error) {
             callback('Unable to connect to the geolaction server!');
